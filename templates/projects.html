@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block page_title %}- Projects{% endblock %}
+
+{% block page_content %}
+
+    {% with title = 'Projects' %}
+        {% include 'base/nav.html' %}
+    {% endwith %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-label">
+                    <div class="row row-label text-center">
+                        <a href="http://gimels.com.br/" target="_blank">
+                            <img class="img-hint" src="/static/img/projects/gimels/logo.png">
+                            <h3>Gimels Intelligence</h3>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <p style="text-align: justify;">
+                            Uma forma simples e centralizada para gerenciar suas atividades como médico.
+                        </p><br>
+                        <p style="text-align: center;">
+                            Resources:<br>
+                            <a href="https://www.djangoproject.com/" target="_blank"><span class="label label-default">Django</span></a>
+                            <a href="http://www.mysql.com/" target="_blank"><span class="label label-default">MySQL</span></a>
+                            <a href="http://celery.readthedocs.org/en/latest/index.html" target="_blank"><span class="label label-default">Celery</span></a>
+                            <a href="http://nginx.org/en/" target="_blank"><span class="label label-default">Nginx</span></a>
+                            <a href="http://gunicorn.org/" target="_blank"><span class="label label-default">Gunicorn</span></a>
+                            <a href="http://supervisord.org/" target="_blank"><span class="label label-default">Supervisor</span></a>
+                            <a href="http://www.ubuntu.com/server" target="_blank"><span class="label label-default">Ubuntu Server</span></a>
+                            <a href="http://puppetlabs.com/" target="_blank"><span class="label label-default">Puppet</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

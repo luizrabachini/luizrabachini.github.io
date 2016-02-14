@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+
+{% block page_title %}{% endblock %}
+
+{% block page_content %}
+
+    <div class="container">
+        <div class="row">
+            <h1 class="title title-home">Luiz Rabachini</h1>
+        </div>
+        <div class="row">
+            <div class="socials socials-icon col-sm-12">
+                {% include 'base/link_socials.html' %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block page_js %}
+
+    <script src="/static/js/snake-game.min.js"></script>
+    <script type="text/javascript">
+        snakeGame = new SnakeGame();
+        snakeGame.init();
+    </script>
+
+{% endblock %}

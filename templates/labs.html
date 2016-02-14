@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block page_title %}- Labs{% endblock %}
+
+{% block page_content %}
+
+    {% with title = 'Labs' %}
+        {% include 'base/nav.html' %}
+    {% endwith %}
+
+    <div class="container">
+        <div class="row row-label text-left">
+            <div id="repos" class="col-sm-12">
+                <p class="loading-spin"><i class="fa fa-refresh fa-spin"></i></p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block page_js %}
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $.getJSON( "https://api.github.com/users/luizrabachini/repos", function(data) {
+                $("#repos").html('');
+                for (i = 0; i < data.length; i++) {
+                    repo = data[i];
+                    $("#repos").append(
+                        "<div class=\"row\">\
+                            <div class=\"col-sm-6 col-sm-offset-3\">\
+                                <h3>" + repo.name + "</h3>\
+                                <p>" + repo.description + "</p>\
+                                <a href=\"" + repo.html_url + "\" target=\"blank\"><span class=\"label label-success\">Repository</span></a>\
+                                <hr></hr>\
+                            </div>\
+                        </div>");
+                }
+            });
+        });
+    </script>
+
+{% endblock %}
