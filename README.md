@@ -1,7 +1,7 @@
 Luiz Rabachini
 ==============
 
-My personal page content available in [luizrabachini.github.io](https://luizrabachini.github.io) and [luizrabachini.com](https://luizrabachini.com).
+My personal page content available in [luizrabachini.github.io](http://luizrabachini.github.io) and [luizrabachini.com](http://luizrabachini.com).
 
 
 Install
