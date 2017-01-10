@@ -1,22 +1,31 @@
 Luiz Rabachini
 ==============
 
-My personal page content available in [luizrabachini.github.io](http://luizrabachini.github.io) and [luizrabachini.com](http://luizrabachini.com).
+My personal page content available in [luizrabachini.com](http://luizrabachini.com).
 
 
 Install
 -------
 
+After configure [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), install:
+
 ```bash
-	$ mkvirtualenv luizrabachini.github.io
-	$ pip install -r requirements.txt
+    $ mkvirtualenv luizrabachini.github.io
+    $ pip install -r requirements.txt
 ```
 
 
-Build and Serve
----------------
+Build
+-----
 
 ```bash
-	$ python build.py
-	$ python -m SimpleHTTPServer 8080 .
+    $ make build
+```
+
+
+Server
+------
+
+```bash
+    $ make runserver
 ```
